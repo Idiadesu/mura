@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title>Random Number</title>
+    </head>
+    <body>
+        <label for="start">Start:</label>
+        <input type="nember" id="start" name="start"><br><br>
+        <label for="stop">Stop:</label>
+        <input type="number" id="stop" name="stop"><br><br>
+        <button onclick="generate()">RAMDOM !!!</button>
+        <h3 id = output></h3>
+
+    <script>
+        function generate() {
+            const min = Number (document.getElementById("start").value)
+            const max = Number (document.getElementById("stop").value)
+
+            const n  =  Math.floor(Math.random() * (max - min) ) + min;
+
+            document.getElementById("output").innerHTML = n + ""
+            console.log(n)
+        }
+    </script>
+
+    </body>
+</html>
